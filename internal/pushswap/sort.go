@@ -58,7 +58,7 @@ func sortThree(s *Stacks) []string {
 		ops = append(ops, op)
 	}
 
-	for !s.IsSorted() {
+	for !aIsSorted(s) {
 		a, b, c := s.A[0], s.A[1], s.A[2]
 		if a > b && b < c && a < c {
 			rec("sa", s.Sa)
@@ -148,4 +148,12 @@ func radixSort(s *Stacks) []string {
 	}
 
 	return ops
+}
+func aIsSorted(s *Stacks) bool {
+	for i := 0; i < len(s.A)-1; i++ {
+		if s.A[i] > s.A[i+1] {
+			return false
+		}
+	}
+	return true
 }

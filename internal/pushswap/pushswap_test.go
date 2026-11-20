@@ -100,6 +100,8 @@ func TestSolveSorting(t *testing.T) {
 		{3, 2, 1},
 		{2, 1, 3, 6, 5, 8},
 		{-50, 100, 0, -1, 42, 7, -100, 25},
+		{4, 3, 2, 1},
+		{5, 4, 3, 2, 1},
 	}
 
 	for _, input := range tests {
